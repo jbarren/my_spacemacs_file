@@ -41,6 +41,7 @@ values."
      colors
      rust
      themes-megapack
+     java
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -205,7 +206,9 @@ user code."
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-  (add-hook 'prog-mode-hook #'linum-mode)
+  (global-linum-mode 1)
+  (setq eclim-eclipse-dirs "~/eclipse"
+        eclim-executable "~/eclipse/eclim")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
