@@ -342,7 +342,9 @@ you should place your code here."
           ("n" "Note" entry (file "~/workspace/orgfiles/main.org")
            "* %?\n%U" :empty-lines 1)
           ("N" "Note with Clipboard" entry (file "~/workspace/orgfiles/main.org")
-           "* %?\n%U\n   %c" :empty-lines 1)))
+           "* %?\n%U\n   %c" :empty-lines 1)
+          ("w" "Web site" entry (file "")
+           "* %a :website:\n\n%U %?\n\n%:initial")))
   (org-journal-update-auto-mode-alist)
 )
 
