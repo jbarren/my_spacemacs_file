@@ -334,6 +334,15 @@ you should place your code here."
   (simplenote2-setup)
   (require 'org-tempo)
   (setq gac-automatically-push-p t)
+  (setq org-capture-templates
+        '(("t" "Todo" entry (file "~/workspace/orgfiles/tasks.org")
+           "* TODO %?\n%U" :empty-lines 1)
+          ("T" "Todo with Clipboard" entry (file "~/workspace/orgfiles/tasks.org")
+           "* TODO %?\n%U\n   %c" :empty-lines 1)
+          ("n" "Note" entry (file "~/workspace/orgfiles/main.org")
+           "* %?\n%U" :empty-lines 1)
+          ("N" "Note with Clipboard" entry (file "~/workspace/orgfiles/main.org")
+           "* %?\n%U\n   %c" :empty-lines 1)))
   (org-journal-update-auto-mode-alist)
 )
 
