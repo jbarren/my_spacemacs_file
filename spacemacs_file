@@ -133,8 +133,8 @@ values."
    ;; `recents' `bookmarks' `projects' `agenda' `todos'."
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
-   dotspacemacs-startup-lists '((recents . 5)
-                                (projects . 7))
+   dotspacemacs-startup-lists '((recents . 25)
+                                (projects . 25))
    ;; True if the home buffer should respond to resize events.
    dotspacemacs-startup-buffer-responsive t
    ;; Default major mode of the scratch buffer (default `text-mode')
@@ -346,6 +346,8 @@ you should place your code here."
           ("w" "Web site" entry (file "")
            "* %a :website:\n\n%U %?\n\n%:initial")))
   (org-journal-update-auto-mode-alist)
+  (setq org-todo-keywords
+        '((sequence "TODO" "NEXT" "WAITING" "SOMEDAY" "|" "DONE" "WONTDO")))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
